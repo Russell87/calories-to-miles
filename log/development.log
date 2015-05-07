@@ -571,3 +571,54 @@ Started GET "/assets/application.css?body=1" for 74.115.233.166 at 2015-05-06 20
 
 
 Started GET "/assets/application.js?body=1" for 74.115.233.166 at 2015-05-06 20:28:01 +0000
+
+
+Started GET "/" for 76.26.29.62 at 2015-05-07 12:16:07 +0000
+Processing by StaticPagesController#homepage as HTML
+  Rendered static_pages/homepage.html.erb within layouts/application (45.7ms)
+Completed 200 OK in 486ms (Views: 427.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages.css?body=1" for 76.26.29.62 at 2015-05-07 12:16:09 +0000
+
+
+Started GET "/assets/application.js?body=1" for 76.26.29.62 at 2015-05-07 12:16:09 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 76.26.29.62 at 2015-05-07 12:16:09 +0000
+
+
+Started GET "/assets/application.css?body=1" for 76.26.29.62 at 2015-05-07 12:16:10 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 76.26.29.62 at 2015-05-07 12:16:10 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 76.26.29.62 at 2015-05-07 12:16:10 +0000
+
+
+Started GET "/assets/static_pages.js?body=1" for 76.26.29.62 at 2015-05-07 12:16:10 +0000
+
+
+Started GET "/settings" for 76.26.29.62 at 2015-05-07 12:16:12 +0000
+Processing by StaticPagesController#settings as HTML
+  Rendered static_pages/settings.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 77ms (Views: 68.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 76.26.29.62 at 2015-05-07 12:16:13 +0000
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 743ms (Views: 742.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 76.26.29.62 at 2015-05-07 12:16:14 +0000
+Processing by StaticPagesController#homepage as HTML
+  Rendered static_pages/homepage.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 54ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 76.26.29.62 at 2015-05-07 12:16:15 +0000
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 50ms (Views: 49.3ms | ActiveRecord: 0.0ms)
