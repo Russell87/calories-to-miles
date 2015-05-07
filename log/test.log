@@ -264,3 +264,25 @@ StaticPagesControllerTest: test_should_make_sure_the_about_and_settings_links_ar
 Processing by StaticPagesController#homepage as HTML
 Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
   [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------------------
+StaticPagesControllerTest: test_should_get_about_page_and_check_title
+---------------------------------------------------------------------
+Processing by StaticPagesController#about as HTML
+  Rendered static_pages/about.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 106ms (Views: 105.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------
+StaticPagesControllerTest: test_should_get_the_settings_page_and_check_title
+----------------------------------------------------------------------------
+Processing by StaticPagesController#settings as HTML
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------------------
+StaticPagesControllerTest: test_should_make_sure_the_about_and_settings_links_are_prsent
+----------------------------------------------------------------------------------------
+Processing by StaticPagesController#homepage as HTML
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
