@@ -12,10 +12,12 @@
 
 <!-- Links to pages on the application defined in config/routes.rb and directed to app/views/static_pages -->
 
-<%= link_to 'Home', root_path %>
-<%= link_to 'About', about_path %>
-<%= link_to 'Settings', settings_path %>
-<%= link_to 'Food Database', food_path %>
+<ul>
+  <li>  <%= link_to 'Home', root_path %></li>
+  <li>  <%= link_to 'About', about_path %></li>
+  <li>  <%= link_to 'Settings', settings_path %></li>
+  <li>  <%= link_to 'Food Database', food_path %></li>
+</ul>
 
 <!-- Below will display the corresponding view ("page") when a user clicks the above links -->
 <%= yield %>
