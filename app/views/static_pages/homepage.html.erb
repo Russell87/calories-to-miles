@@ -1,3 +1,15 @@
 <%= content_for :title, "Calories to Miles | Homepage" %>
 
-
+<form>
+Weight: <input type="text" name="weight">
+<br>
+Quantity: <input type="text" name="quantity">
+Food:
+<input list="food" name="food">
+<datalist id="food">
+    <option value="Apple">
+    <option value="Orange">
+    <option value="Doughnut">
+</datalist>
+<input type="submit" name="Calculate">
+</form>
