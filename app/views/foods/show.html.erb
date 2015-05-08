@@ -1,5 +1,18 @@
-<p>
-<% @food.each do |food| %>
-<li><%= food.name %> has <%= food.calories %></li>
+<!-- This is the table to display food and calories from the database -->
+<%= content_for :title, "Calories to Miles | Food Database" %>
+<table id="food-table">
+    <tr>
+        <th>Food</th>
+        <th>Calories</th>
+    </tr>
+    <tr> 
+        <% @food.limit(5).each do |food| %>
+    <td>
+        <%= food.name %>
+    </td>
+    <td>
+        <%= food.calories %>
+    </td>
+</tr>
 <% end %>
-</p>
+</table>
