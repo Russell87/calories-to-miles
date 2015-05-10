@@ -1,6 +1,7 @@
 <!-- This is the table to display food and calories from the database -->
 <%= content_for :title, "Calories to Miles | Food Database" %>
-<table id="food-table">
+<div class="table-responsive">
+<table id="food-table" class="table table-condensed table-striped">
     <tr>
         <th>Food</th>
         <th>Calories</th>
@@ -16,3 +17,4 @@
 </tr>
 <% end %>
 </table>
+</div>
