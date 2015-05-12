@@ -18,3 +18,7 @@
 <% end %>
 </table>
 </div>
+
+<% @exercise.limit(3).each do |exercise| %>
+<%= exercise.name %> has a met value of <%= exercise.met %>
+<% end %>

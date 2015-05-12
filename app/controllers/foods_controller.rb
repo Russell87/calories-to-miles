@@ -5,6 +5,7 @@ class FoodsController < ApplicationController
   def show
     #corresponds magically to show.html.erb??
     @food = Food.all
+    @exercise = Exercise.all
   end
   
 end
