@@ -1,19 +1,16 @@
 <%= content_for :title, "Calories to Miles | Homepage" %>
 
+<%= @calc %>
 
-<div class="dropdown">
-    <form class="form-inline">
-        Weight:<br>
-        <input type="text" name="weight" class="form-control" placeholder="Weight"><br>
-        Quantity:<br> 
-        <input type="text" name="quantity" class="form-control" placeholder="Quantity"><br>
-        Food: <br>
-        <select name="foods" class="form-control">
-            <option value="Apple">Apple</option>
-            <option value="Orange">Orange</option>
-            <option value="Doughnut">Doughnut</option>
-        </select>
-        <br>
-        <input type="submit" value="Calculate" class="btn btn-primary"><br>
-    </form>
+
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <%= form_for :answer, url: results_path do |f| %>
+            <%= f.label :weight %>:     <%= f.text_field :weight, class: 'form-control' %>
+            <%= select_tag(:exercise, options_for_select([['Running', 1], ['Walking', 2]]))%>
+            <%= select_tag(:food, options_for_select(Food.all.pluck(:name))) %>
+            <%= f.submit %> 
+        <% end %>
+    </div>
 </div>
