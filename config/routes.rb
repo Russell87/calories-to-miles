@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  match 'results', to: 'static_pages#results', via: 'post', as: 'results'
+  match 'results', to: 'exercises#results', via: 'post', as: 'results'
   get 'foods/new'
   get 'exercises/new'
  
