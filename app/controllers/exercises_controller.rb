@@ -1,13 +1,16 @@
 class ExercisesController < ApplicationController
     
    def show
-       # @exercise = Exercise.new - do I need this?? 
-
+        @exerciseOptions = Exercise.pluck(:name, :id)
+        @foodOptions = Food.limit(5).pluck(:name, :id)
    end
     
    def results
-      @exercise = Exercise.find_by(params[:met])
-      @selectedfood = Food.find_by(params[:name])
+      @weightResult = params[:results][:weight]
+      @exerciseResult = Exercise.find_by_id(params[:results][:exercise].to_i)
+      @foodResult = Food.find_by_id(params[:results][:food].to_i)
+      #do maths here 
+      #@weightResult * @exterciseResult + @foodResult ete etc
    end
    
   

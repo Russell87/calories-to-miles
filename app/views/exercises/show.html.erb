@@ -7,10 +7,10 @@
     <div class="form-group">
         <%= form_for :results, url:results_path do |f| %>
             <strong>Weight:</strong> <br>
-            <%= f.text_field :weight, placeholder: "Weight in lbs" %> <br>
-            <strong>Exercise:</strong><br> <%= select_tag(:exercise, options_for_select(Exercise.all.pluck(:name))) %><br>
+            <%= f.number_field :weight, placeholder: "Weight in lbs" %> <br>
+            <strong>Exercise:</strong><br> <%= f.select(:exercise, options_for_select(@exerciseOptions)) %><br>
             <strong>Food:</strong><br>
-            <%= select_tag(:food, options_for_select(Food.limit(5).pluck(:name))) %><br><br>
+            <%= f.select(:food, options_for_select(@foodOptions)) %><br><br>
             <p><%= f.submit "Calculate", class: "btn btn-primary" %> </p>
         <% end %>
     </div>
