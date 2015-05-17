@@ -14,7 +14,6 @@ Rails.application.routes.draw do
   
   #This is a shortcut to all the routes
   
-  resources :foods, only: [:show]
-  resources :exercises, only: [:show]
+
   
 end
