@@ -10,10 +10,10 @@ Rails.application.routes.draw do
   get 'food'        => 'foods#show'
   get 'exercise'    => 'exercises#show'
   
+
  
   
   #This is a shortcut to all the routes
   
 
-  
 end

@@ -6,7 +6,11 @@
   <div class="container">
     <div class="form-group">
         <%= form_for :results, url:results_path do |f| %>
+
            
+
+            <strong>Weight:</strong> <br>
+
             <%= f.number_field :weight, placeholder: "Weight in lbs" %> <br>
             <strong>Exercise:</strong><br> <%= f.select(:exercise, options_for_select(@exerciseOptions)) %><br>
             <strong>Food:</strong><br>
