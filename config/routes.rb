@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'exercises/new'
  
 
-  root                 'static_pages#homepage'
+  root                 'exercises#show'
   get 'about'       => 'static_pages#about'
   get 'settings'    => 'static_pages#settings'
   get 'food'        => 'foods#show'
