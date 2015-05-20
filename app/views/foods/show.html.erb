@@ -1,5 +1,7 @@
 <!-- This is the table to display food and calories from the database -->
 <%= content_for :title, "Calories to Miles | Food Database" %>
+<%= content_for :sticky_title, "Food Database" %> 
+
 <div class="table-responsive">
 <table id="food-table" class="table table-condensed table-striped">
     <tr>
@@ -19,8 +21,3 @@
 </table>
 </div>
 
-
-
-<% @exercise.limit(3).each do |exercise| %>
-<%= exercise.name %> has a met value of <%= exercise.met %><br />
-<% end %>

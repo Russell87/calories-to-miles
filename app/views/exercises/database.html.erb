@@ -1,0 +1,22 @@
+<%= content_for :title, "Calories to Miles | Exercise Database" %>
+<%= content_for :sticky_title, "Exercise Database" %>
+
+
+<div class="table-responsive">
+<table id="food-table" class="table table-condensed table-striped">
+    <tr>
+        <th>Exercise</th>
+        <th>MET Value</th>
+    </tr>
+    <tr> 
+        <% @exercise.limit(5).each do |e| %>
+    <td>
+        <%= e.name %>
+    </td>
+    <td>
+        <%= e.met %>
+    </td>
+</tr>
+<% end %>
+</table>
+</div>

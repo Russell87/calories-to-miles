@@ -4,16 +4,12 @@ Rails.application.routes.draw do
   get 'exercises/new'
  
 
-  root                 'exercises#show'
-  get 'about'       => 'static_pages#about'
+  root                 'exercises#show'#on initial view, show the form to calculate
+  get 'about'       => 'static_pages#about' 
   get 'settings'    => 'static_pages#settings'
   get 'food'        => 'foods#show'
   get 'exercise'    => 'exercises#show'
-  
-
- 
-  
-  #This is a shortcut to all the routes
-  
+  get 'exercise_database' => 'exercises#database'
+  get 'credits' => 'static_pages#credits'
 
 end

@@ -1,30 +1,37 @@
 class ExercisesController < ApplicationController
+   
+   def database
+      @exercise = Exercise.all
+   end
+   
     
    def show
-
-       # @exercise = Exercise.new - do I need this?? 
-       #In the show.html.erb file which has the form, this is needed to select the variables and push them to the next page
-       #it corresponds to that form - it's finding by id <--- important
-   @exerciseOptions = Exercise.pluck(:name, :id) 
-   @foodOptions = Food.limit(5).pluck(:name, :id)
+      #This corresponds to show.html.erb and allows the form to select from the model (database) items to be shown
+   
+      #select the exercises
+      @exerciseOptions = Exercise.pluck(:name, :id) 
+   
+      #select the food and limit it to 5 itmes
+      @foodOptions = Food.limit(5).pluck(:name, :id)
    end
     
    def results
+      #Find by id from the results form 
       
-      #find everything by ID!!! 
-      @weightResult = params[:results][:weight].to_i / 2.2046 #shows weight!! params is the form it came from and weight is the variable
+      #convert the weight from the results form to kilograms
+      @weightResult = params[:results][:weight].to_i / 2.2046 
+      
+      #select the exercise from the results drop down and convert it to an integer
       @exerciseResult = Exercise.find_by_id(params[:results][:exercise].to_i) 
       @foodResult = Food.find_by_id(params[:results][:food].to_i) 
       
-      #math calcs here
-      #@weightResult * @exterciseResult + @foodResult ete etc
+      #calculate the math formula below
       
-      
-      #formula MET Value x 3.5 x body weight (kg) / 200 = calories burned per minute
+      #Formula: MET Value x 3.5 x body weight (kg) / 200 = calories burned per minute
       @calc = ((@exerciseResult.met * 3.5 * @weightResult) / 200).to_f
+      #calculate the minutes it would take to burn off the food item and round it up to nearest whole number
       @minutes = (@foodResult.calories / @calc).round
-      
-      
-      
-  end
- end
+            
+   end
+
+end
