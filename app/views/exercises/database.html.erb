@@ -1,6 +1,9 @@
 <%= content_for :title, "Calories to Miles | Exercise Database" %>
 <%= content_for :sticky_title, "Exercise Database" %>
 
+<p class="lead">There are currently <%= pluralize @exerciseCount, 'record', 'records' %> in the database.</p>
+
+<%= will_paginate  %>
 
 <div class="table-responsive">
 <table id="food-table" class="table table-condensed table-striped">
@@ -10,7 +13,7 @@
         <th>MET Value</th>
     </tr>
     <tr> 
-        <% @exercise.each do |e| %>
+        <% @exercises.each do |e| %>
     <td>
         <%= e.category %>
     </td>
@@ -24,3 +27,5 @@
 <% end %>
 </table>
 </div>
+
+<%= will_paginate  %>

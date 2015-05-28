@@ -1,7 +1,8 @@
 class ExercisesController < ApplicationController
    
    def database
-      @exercise = Exercise.all
+      @exercises = Exercise.paginate(page: params[:page], :per_page => '10')
+      @exerciseCount = Exercise.count
    end
    
     
@@ -10,6 +11,7 @@ class ExercisesController < ApplicationController
    
       #select the exercises
       @exerciseOptions = Exercise.pluck(:description, :id) 
+      
    
       #select the food and limit it to 5 itmes
       @foodOptions = Food.limit(5).pluck(:name, :id)
