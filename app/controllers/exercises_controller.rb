@@ -9,7 +9,7 @@ class ExercisesController < ApplicationController
       #This corresponds to show.html.erb and allows the form to select from the model (database) items to be shown
    
       #select the exercises
-      @exerciseOptions = Exercise.pluck(:name, :id) 
+      @exerciseOptions = Exercise.pluck(:description, :id) 
    
       #select the food and limit it to 5 itmes
       @foodOptions = Food.limit(5).pluck(:name, :id)
