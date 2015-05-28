@@ -6,12 +6,16 @@
 <table id="food-table" class="table table-condensed table-striped">
     <tr>
         <th>Exercise</th>
+        <th>Description</th>
         <th>MET Value</th>
     </tr>
     <tr> 
-        <% @exercise.limit(5).each do |e| %>
+        <% @exercise.each do |e| %>
     <td>
-        <%= e.name %>
+        <%= e.category %>
+    </td>
+    <td>
+        <%= e.description %>
     </td>
     <td>
         <%= e.met %>
