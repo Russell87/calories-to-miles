@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150527163743) do
+ActiveRecord::Schema.define(version: 20150529113517) do
 
   create_table "exercises", force: :cascade do |t|
     t.string   "category"
-    t.decimal  "met",         precision: 4, scale: 2
+    t.decimal  "met",         precision: 5, scale: 2
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.text     "description"
