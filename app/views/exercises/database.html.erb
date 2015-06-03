@@ -1,7 +1,7 @@
 <%= content_for :title, "Calories to Miles | Exercise Database" %>
 <%= content_for :sticky_title, "Exercise Database" %>
 
-<p class="lead">There are currently <%= pluralize @exerciseCount, 'record', 'records' %> in the database.</p>
+<p class="lead">There are currently <%= pluralize @exerciseCount, 'record', 'records' %> in the database representing <%= pluralize @categoryCount, 'category', 'categories' %>.</p>
 
 <%= will_paginate  %>
 
