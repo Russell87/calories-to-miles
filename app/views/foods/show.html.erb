@@ -2,6 +2,8 @@
 <%= content_for :title, "Calories to Miles | Food Database" %>
 <%= content_for :sticky_title, "Food Database" %> 
 
+<p class="lead"> There are presently <%= @foodCount %> food <%= 'item'.pluralize(@foodCount) %> in the database.<p>
+
 <div class="table-responsive">
 <table id="food-table" class="table table-condensed table-striped">
     <tr>
