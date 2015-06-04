@@ -40,7 +40,7 @@ end
 #   category, met, description = row #bring all the stuff out of the csv file so the database will know what to accept
 #    Exercise.create(category: category, met: met, description: description)
 
-    file_path = "#{Rails.root}/lib/data/NewExerciseDataTest.csv"
+    file_path = "#{Rails.root}/lib/data/ExerciseData.csv"
     CSV.foreach(file_path, :headers => true, :col_sep => ",", :row_sep => :auto) do |row|
     Exercise.create(:category => row['category'], :description => row['description'], :met => row['met'])
    
