@@ -2,11 +2,8 @@
 
 The objective of the application is to:
 
-* Calculate the amount of exercise needed to burn off user entered food/drink
+* Provide an extensive list of exercises from which to choose
+* Link to the USDA Food Database (currently in development)
+* Allow user to calculate exercise requirements for selected food item 
 
-#Conversions & Formulas
 
-* 1 kg = 2.2046 lbs
-
-* MET Value x 3.5 x body weight (kg) / 200 = calories burned per minute
-* Food / calories burned per minute
