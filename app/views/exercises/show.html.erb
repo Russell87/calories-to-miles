@@ -1,25 +1,14 @@
-
-<div class="row">
-  <div class="col-sm-4"></div>
-  <div class="col-sm-4">
-  <div class="container">
+<%= form_for :results, url:results_path do |f| %>
     <div class="form-group">
-        <%= form_for :results, url:results_path do |f| %>
-
-           
-
-            <strong>Weight:</strong> <br>
-
-            <%= f.number_field :weight, placeholder: "Weight in lbs" %> <br>
-            <strong>Exercise:</strong><br> <%= f.select(:exercise, options_for_select(@exerciseOptions)) %><br>
+           <strong>Weight:</strong> <br>
+            <%= f.number_field :weight, placeholder: "Weight in lbs"%> <br>
+            <strong>Exercise:</strong><br><% @wat = @exerciseOptions.map{ |w, x| w.size > 35 ? [w[0,35] + "...", x] : [w, x] } %>
+            <%= f.select(:exercise, options_for_select(@wat), {include_blank: true}) %> <br>
             <strong>Food:</strong><br>
             <%= f.select(:food, options_for_select(@foodOptions)) %><br><br>
             <p><%= f.submit "Calculate", class: "btn btn-primary" %> </p>
         <% end %>
     </div>
 </div>
-</div>
-</div>
-</div>
-  
+</form>
  

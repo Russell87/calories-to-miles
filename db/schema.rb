@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20150529113517) do
   end
 
   create_table "foods", force: :cascade do |t|
-    t.string   "name",       limit: 255
+    t.string   "name"
     t.integer  "calories"
     t.datetime "created_at"
     t.datetime "updated_at"
