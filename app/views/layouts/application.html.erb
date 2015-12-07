@@ -13,6 +13,7 @@
 </head>
 <body>
 <%= render 'layouts/header' %>
+
 <!-- Links to pages on the application defined in config/routes.rb and directed to app/views/static_pages -->
 
 <!-- Begin page content -->
@@ -20,6 +21,12 @@
     <div class="page-header">
       <h1><%= yield(:sticky_title) %></h1>
     </div>
+    <% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
     <!-- By default, show the calculator form otherwise show the corresponding view user clicks on (such as about, database, etc) -->
     <%= yield %>
     
