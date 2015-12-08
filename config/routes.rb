@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+   devise_for :users
+
+  
   match 'results', to: 'exercises#results', via: 'post', as: 'results'
   get 'foods/new'
   get 'exercises/new'
