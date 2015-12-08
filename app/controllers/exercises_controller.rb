@@ -17,7 +17,7 @@ class ExercisesController < ApplicationController
    
       #select the food and limit it to 5 itmes
       @foodOptions = Food.limit(5).pluck(:name, :id)
-      
+         
       
    end
     
