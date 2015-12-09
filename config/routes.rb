@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-   devise_for :users
+   devise_for :users, :controllers => { :registrations => 'registrations' }
 
   
   match 'results', to: 'exercises#results', via: 'post', as: 'results'
