@@ -20,6 +20,7 @@ gem 'sdoc',                    '0.4.0', group: :doc
 gem 'httparty'
 gem 'newrelic_rpm'
 gem 'devise'
+gem 'bootstrap_form'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'

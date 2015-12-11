@@ -1,19 +1,17 @@
 <%= content_for :title, "Calories.to | Home" %>
 <%= content_for :sticky_title, "Calories.to" %>
 
-<%= form_for :results, url:results_path do |f| %>
-    <div class="form-group">
-           <strong>Weight:</strong> <br>
-            <%= f.number_field :weight, placeholder: "Weight in lbs"%> <br>
-            <strong>Exercise:</strong><br><% @wat = @exerciseOptions.map{ |w, x| w.size > 35 ? [w[0,35] + "...", x] : [w, x] } %>
-            <%= f.select(:exercise, options_for_select(@wat), {include_blank: true}) %> <br>
-            <strong>Food:</strong><br>
-            <%= f.select(:food, options_for_select(@foodOptions)) %><br><br>
-            <p><%= f.submit "Calculate", class: "btn btn-primary" %> </p>
+<%= bootstrap_form_for :results, url:results_path, layout: :horizontal, label_col: "col-sm-2", control_col: "col-sm-10" do |f| %>
+           
+            <%= f.number_field :weight, hide_label: true, prepend: "Weight", placeholder: "(lbs)"%> 
+            <% @wat = @exerciseOptions.map{ |w, x| w.size > 35 ? [w[0,35] + "...", x] : [w, x] } %>
+            <%= f.select(:exercise, options_for_select(@wat), {include_blank: true, hide_label: true}) %> 
+            <%= f.select(:food, options_for_select(@foodOptions), hide_label: true) %>
+            <div class="text-right col-sm-10">
+            <%= f.submit "Calculate", class: "btn btn-primary" %> 
+            </div>
         <% end %>
-    </div>
-    
-    
 </div>
-</form>
- 
+    
+    
+  
