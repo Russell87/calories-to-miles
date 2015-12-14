@@ -1,12 +1,14 @@
 class ExercisesController < ApplicationController
    
    def database
+      #Pagination for will_paginate
       @exercises = Exercise.paginate(page: params[:page], :per_page => '10')
+      
       @exerciseCount = Exercise.count
-      
       @categoryCount = Exercise.distinct.count(:category)
-      @exerciseCategory = Exercise.select(:category).distinct
-      
+      #Count the unique categories 
+      @descriptionCount = Exercise.group(:category).uniq.count
+
    end
    
     

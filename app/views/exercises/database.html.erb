@@ -13,19 +13,21 @@
     <th>Number of Exercises</th>
 </tr>
 <tr>
-    <% @exerciseCategory.each do |l| %>
-    
     
 </tr>
+<tr>
+<% @descriptionCount.each do |k,v| %>
+</tr>
 <td>
-<%= l.category %>
-</td>
-<td>
+<%= k %>
 
 </td>
+<td>
+<%= v %>
+</td>
 </tr>
+
 <% end %>
-
 
 </table>
 </div>
