@@ -2,36 +2,11 @@
 <%= content_for :sticky_title, "Exercise Database" %>
 
 
-<p class="lead">There are currently <%= pluralize @exerciseCount, 'record', 'records' %> in the database representing <%= pluralize @categoryCount, 'category', 'categories' %>.
+<p class="lead">There are currently <%= pluralize @exerciseCount, 'record', 'records' %> in the database representing <%= link_to pluralize(@categoryCount, 'category', 'categories'), exercise_categories_path %>.
+
+
 
 <%= will_paginate  %>
-
-<div class="table-responsive">
-<table = id="exercise-category-table" class="table table-condensed table-striped">
-<tr>
-    <th>Category</th>
-    <th>Number of Exercises</th>
-</tr>
-<tr>
-    
-</tr>
-<tr>
-<% @descriptionCount.each do |k,v| %>
-</tr>
-<td>
-<%= k %>
-
-</td>
-<td>
-<%= v %>
-</td>
-</tr>
-
-<% end %>
-
-</table>
-</div>
-
 
 <div class="table-responsive">
 <table id="exercise-table" class="table table-condensed table-striped">

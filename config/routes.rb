@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   get 'exercise'    => 'exercises#show'
   get 'exercise_database' => 'exercises#database'
   get 'credits' => 'static_pages#credits'
+  get 'exercise_categories' => 'exercises#categories'
 
 end
